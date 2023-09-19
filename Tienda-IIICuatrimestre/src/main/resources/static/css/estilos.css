@@ -1,0 +1,92 @@
+
+/* 
+    Created on : 18 sep. 2023, 19:54:01
+    Author     : Robinson Corrales Rodríguez
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+header{
+
+    background-color: skyblue;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+aside{
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    background-color: #FBC02D;
+    bottom: 20px;
+    width: 20%;
+}
+
+section{
+
+    overflow-y: scroll;
+    position: fixed;
+    background-color: bisque;
+    top: 80px;
+    left: 20%;
+    bottom: 20px;
+    width: 80%;
+}
+
+footer{
+    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: beige;
+    color: red;
+    
+}
+
+h1{
+    text-align: center;
+    color: navy;
+
+}
+
+h1,h2,h3{
+
+    font-family: cursive;
+}
+p{
+    color: navy;
+    word-spacing: 4mm;
+}
+p span{
+    color: red;
+}
+
+a{
+    text-decoration: none;
+    background-color: green;
+    color: white;
+}
+
+a:hover{
+    
+    background-color: black;
+    color: white;
+}
+
+a:visited{
+    
+}
