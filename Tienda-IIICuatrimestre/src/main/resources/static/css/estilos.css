@@ -34,7 +34,7 @@ aside{
 }
 
 section{
-
+    
     overflow-y: scroll;
     position: fixed;
     background-color: bisque;
@@ -75,7 +75,7 @@ p span{
     color: red;
 }
 
-a{
+/*a{
     text-decoration: none;
     background-color: green;
     color: white;
@@ -89,4 +89,69 @@ a:hover{
 
 a:visited{
     
+}*/
+table{
+    width: 90%;
 }
+/*
+tbody tr:nth-child(odd){
+  background-color: blue;  
+  color:white;
+}
+
+tbody tr:nth-child(even){
+  background-color: black; 
+  color:white;
+}
+*/
+.celdaCentrada{
+    text-align: center;
+}
+.celdaDerecha{
+    
+    text-align: right;
+}
+
+.nav{
+    
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    
+    color: white;
+    text-decoration: none;
+}
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none; 
+}
+
+.nav-menu-link{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 90px;
+    width: max-content;
+}
+.nav-menu-link:hover{
+    background-color: #024070;
+    transition: 0.5s;
+}
+
+.nav-menu-link{
+    
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+.logo{
+    
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;
+}
+
