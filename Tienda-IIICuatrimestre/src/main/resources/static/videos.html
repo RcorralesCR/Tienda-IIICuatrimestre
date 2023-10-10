@@ -1,46 +1,35 @@
 <!DOCTYPE html>
-<!-- Mi primer página html -->
+<!-- Autor: Moises Benavides
+    Fecha: 18-09-2023
+-->
+<link href="CSS/estilos.css" rel="stylesheet" type="text/css"/>
 <html>
     <head>
-        <title>TechShop</title>
-        <meta charset="UTF-8"> 
-        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
 
+        <title>Ejemplo de Videos</title>
+        <meta charset="UTF-8">
     </head>
-        <body>
-            <!-- Esta etiqueta no es visual pero es para informar que es un encabezado -->
-            <header>
-                    <h2>TechShop</h2>
-                    <nav><!-- Barra menu -no visual- solo info -->
-                        <a href="ejemplo5.html">&triangleleft;</a>|
-                        <a href="index1.html">Home</a>|
-                        <a href="ejemplo2.html">&triangleright;</a><hr>
-                    </nav>
-            </header>
-
-            <aside> <!-- Barra lateral -no visual- solo info -->
-                <div>
-                    <h1 style="text-align: center;background-color: black;color: white">Home</h1>
-                    <p id="alerta">Esto es un párrafo de un texto largo...</p>
-                </div>
-                
-            </aside>
-            <section>
-                <hr>
-                <h2>Ejemplo de videos</h2>
-                <article>
-                    <h3>Primer video</h3>
-                    <figure>
-                        <video width="320" height="240" controls>
-                            <source src="videos/torpedo.mp4" type="video/mp4">
+    <body>
+        <aside>
+            <h2>Home</h2>
+            <h3>El producto mas vendido</h3>
+            <p>
+                Segun los datos del mes de febrero, el producto x203 fue el que registro mas ventas, segun
+                las ventas del mes de enero.
+            </p>
+        </aside>
+        <section>
+            <header><h2>Ejemplos de Videos</h2>            
+            </header>                
+            <article>                  
+                        <video width="370" height="340" controls>
+                            <source src="Videos/torpedo.mp4" type="video/mp4">
                             Your browser does not support the <code>video</code> tag.
-                        </video>
-                    </figure>
-                </article>
-                <hr>
-            </section>
-            <footer>
-                <p>Derechos Reservados &COPY; 2023</p>
-            </footer>
-        </body>
+                        </video>                   
+            </article>
+        </section>
+        <footer>
+            Derechos reservados &COPY; &nbsp; | &nbsp; <address> Telefono 2206-8600</address>
+        </footer>
+    </body>
 </html>
