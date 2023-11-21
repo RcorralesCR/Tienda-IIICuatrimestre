@@ -10,7 +10,7 @@
         <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3" sec:authotize="hasRole('ROLE_ADMIN')">   
+                    <div class="col-md-3" sec:authorize="hasRole('ROLE_ADMIN')">
                         <button 
                             type="button" 
                             class="btn btn-primary btn-block" 
@@ -48,7 +48,7 @@
                                     <input class="form-check-input" type="checkbox" name="activo" id="activo"/>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="imagen">[[#{categoria.ruta_imagen}]]</label>
+                                    <label for="imagen">[[#{categoria.rutaImagen}]]</label>
                                     <input class="form-control" type="file" name="imagenFile" onchange="readURL(this);"/>
                                     <img id="blah" src="#" alt="your image" height="200"/>
                                 </div>
@@ -62,7 +62,7 @@
             </div>
         </section>
 
-        <!-- 3 Sección principal para mostrar la informacion de la entidad categoria -->
+        <!-- 3 Sección principal para mostrar la informaccion de la entidad categoria -->
         <section th:fragment="listadoCategorias" id="categorias">
             <div class="container">
                 <div class="row">
@@ -77,15 +77,15 @@
                                         <tr><th>#</th>
                                             <th>[[#{categoria.descripcion}]]</th>
                                             <th>[[#{categoria.activo}]]</th>
-                                            <th sec:authotize="hasRole('ROLE_ADMIN')"th></tr>
+                                            <th sec:authorize="hasRole('ROLE_ADMIN')"></th></tr>
                                     </thead>
                                     <tbody>
                                         <tr th:each="categoria, contador : ${categorias}">
                                             <td>[[${contador.count}]]</td>
                                             <td>[[${categoria.descripcion}]]</td>
                                             <td th:text="${categoria.activo} ? 'Activa' : 'Inactiva'" />
-                                            <td sec:authotize="hasRole('ROLE_ADMIN')"><a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}"
-                                                   class="btn btn-danger">
+                                            <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}"
+                                                                                         class="btn btn-danger">
                                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
                                                 <a th:href="@{/categoria/modificar/}+${categoria.idCategoria}"
                                                    class="btn btn-success">
@@ -121,7 +121,7 @@
                           class="was-validated"                          
                           enctype="multipart/form-data">
                         <input type="hidden" name="idCategoria" th:field="*{idCategoria}"/>
-                        <input type="hidden" name="ruta_imagen" th:field="*{ruta_imagen}"/>
+                        <input type="hidden" name="rutaImagen" th:field="*{rutaImagen}"/>
                         <section th:replace="~{categoria/fragmentos :: botonesEditar}"/>
                         <div id=details>
                             <div class="container">
@@ -147,10 +147,10 @@
                                                            th:field="*{activo}">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="imagen">[[#{categoria.ruta_imagen}]]</label>
+                                                    <label for="imagen">[[#{categoria.rutaImagen}]]</label>
                                                     <input class="form-control" type="file" name="imagenFile"
                                                            onchange="readURL(this);" />
-                                                    <img id="blah" th:src="@{${categoria.ruta_imagen}}" alt="your image" height="200"/>
+                                                    <img id="blah" th:src="@{${categoria.rutaImagen}}" alt="your image" height="200"/>
                                                 </div>
                                             </div>
                                         </div>
